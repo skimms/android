@@ -1,3 +1,4 @@
 /.settings
 bin/
 src/bin
+gen/
