@@ -16,6 +16,7 @@
 package com.example.android.fragments;
 
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,6 +62,7 @@ public class ArticleFragment extends Fragment {
 
     public void updateArticleView(int position) {
         TextView article = (TextView) getActivity().findViewById(R.id.article);
+        article.setMovementMethod(ScrollingMovementMethod.getInstance());
         article.setText(Ipsum.Articles[position]);
         mCurrentPosition = position;
     }
