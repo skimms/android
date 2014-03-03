@@ -10,7 +10,7 @@
     <string name="title_userId">아이디</string>
     <string name="title_content">내용</string>    
     <string name="title_complte">완료</string>
-    <string name="title_cancle">취소</string>
+    <string name="title_cancel">취소</string>
     <string name="title_close">창닫기</string>
 
 </resources>

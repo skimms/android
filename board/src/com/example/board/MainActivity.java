@@ -36,30 +36,30 @@ public class MainActivity extends TabActivity {
 		inflater.inflate(R.layout.activity_main, mTab.getTabContentView(), true );
 		
 		mTab.addTab(mTab.newTabSpec("tag")
-				.setIndicator("ÀÏ¹İ")
+				.setIndicator("ì¼ë°˜")
 				.setContent(R.id.opt_general));
 		
 		mTab.addTab(mTab.newTabSpec("tag")
-				.setIndicator("ÀÏ¹İ2")
+				.setIndicator("ì¼ë°˜2")
 				.setContent(R.id.opt_general2));
 		
 		mTab.addTab(mTab.newTabSpec("tag")
-				.setIndicator("ÀÏ¹İ3")
+				.setIndicator("ì¼ë°˜3")
 				.setContent(R.id.opt_general3)	);
 		
-		//Ã¹¹øÂ° ÅÇ
-		//µ¥ÀÌÅÍ ¿øº» ÁØºñ
+		//ì²«ë²ˆì§¸ íƒ­
+		//ë°ì´í„° ì›ë³¸ ì¤€ë¹„
 		ArrayList<String> arGeneral = new ArrayList<String>();
-		arGeneral.add("±èÀ¯½Å");
-		arGeneral.add("ÀÌ¼ø½Å");
-		arGeneral.add("°­°¨Âù");
-		arGeneral.add("À»Áö¹®´ö");
+		arGeneral.add("ê¹€ìœ ì‹ ");
+		arGeneral.add("ì´ìˆœì‹ ");
+		arGeneral.add("ê°•ê°ì°¬");
+		arGeneral.add("ì„ì§€ë¬¸ë•");
 		
-		//¾î´ğÅÍ ÁØºñ
+		//ì–´ëŒ‘í„° ì¤€ë¹„
 		ArrayAdapter<String> Adapter;
 		Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arGeneral);
 		
-		//¾î´ğÅÍ ¿¬°á
+		//ì–´ëŒ‘í„° ì—°ê²°
 		ListView list = (ListView) findViewById(R.id.listView1);
 		list.setAdapter(Adapter);
 		
@@ -73,7 +73,7 @@ public class MainActivity extends TabActivity {
 		});
 		
 		
-		//2¹øÀç ÅÇ
+		//2ë²ˆì¬ íƒ­
 		 //Load File
         BufferedReader jsonReader = new BufferedReader(new InputStreamReader(this.getResources().openRawResource(R.raw.items)));
         StringBuilder jsonBuilder = new StringBuilder();
@@ -107,7 +107,7 @@ public class MainActivity extends TabActivity {
 	        ListView list2 = (ListView) findViewById(R.id.listView2);
 //	        list2.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, fields));
 	        
-	        //ItemObject¸¦ Ãâ·ÂÇÒ Adapter Å¬·¡½º°¡ ÇÊ¿ä	        	        
+	        //ItemObjectë¥¼ ì¶œë ¥í•  Adapter í´ë˜ìŠ¤ê°€ í•„ìš”	        	        
 	        //list2.setAdapter(new ArrayAdapter<ItemObject>(this, android.R.layout.simple_list_item_1, fields));
 	        list2.setAdapter(new ItemAdapter(this, R.layout.listitem, fields));
 		} catch (IOException e) {
@@ -118,7 +118,7 @@ public class MainActivity extends TabActivity {
 			e.printStackTrace();
 		}
         
-        //3¹øÂ° ÅÜ
+        //3ë²ˆì§¸ í…
         
 		
 	}

@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class WriteActivity extends Activity {
 
@@ -19,6 +21,18 @@ public class WriteActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				finish();
+			}
+		});
+		
+		Button btnWrite = (Button) findViewById(R.id.button_write);
+		btnWrite.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				EditText editText1 = (EditText) findViewById(R.id.editText1);
+				String title = editText1.getText().toString();
+				Toast.makeText(getApplicationContext(), "titie:" + title, Toast.LENGTH_LONG).show();
 			}
 		});
 	}
